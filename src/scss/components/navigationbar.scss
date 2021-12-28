@@ -1,0 +1,25 @@
+nav{
+    background-color: lightgrey;
+    color: black;
+    list-style-type: none;
+    font-size: large;
+    float: left;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.nav-bar{
+    width: 25%;
+    display: flex;
+    justify-content: space-evenly;
+    cursor: pointer;
+
+
+    
+
+    a:hover {
+        background-color: white;
+    }
+}

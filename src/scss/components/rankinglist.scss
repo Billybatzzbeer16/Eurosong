@@ -1,0 +1,53 @@
+@mixin scrollbars($size, $foreground-color, $background-color: mix($foreground-color, white,  50%)) {
+    // For Google Chrome
+    &::-webkit-scrollbar {
+      width:  $size;
+      height: $size;
+    }
+  
+    &::-webkit-scrollbar-thumb {
+      background: $foreground-color;
+      border-radius: 15%;
+    }
+  
+    &::-webkit-scrollbar-track {
+      background: $background-color;
+    }
+  
+    // For Internet Explorer
+    & {
+      scrollbar-face-color: $foreground-color;
+      scrollbar-track-color: $background-color;
+    }
+  }
+.ranking{
+    text-align: center;
+    list-style-type: none;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    max-height:600px;
+    margin-top: 8%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    @include scrollbars(10px, white, 100e4a);
+}
+    
+
+
+.rotate{
+    -webkit-transition: -webkit-transform 3.5s;
+	transition: transform 3.5s;
+
+    &:hover{
+        -webkit-transform: rotateY(360deg);
+        transform: rotateY(360deg)  scale(2);
+        top: 50%;
+        left: 50%;
+        margin: auto;
+    }
+    &:first-child{
+        margin-top: 80px;
+    }
+}
+
+
+    
